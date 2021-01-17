@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class SessionManager : MonoBehaviour
 {
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ExitGame();
+        }
+    }
+
     public void ReloadScene()
     {
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
